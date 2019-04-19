@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
     <div class="row">
@@ -11,7 +11,7 @@
 
             <h1 class="display-3">Companies</h1>
             <div>
-                <a style="margin: 19px;" href="{{ route('companies.create')}}" class="btn btn-primary">New</a>
+                <a href="{{ route('companies.create')}}" class="btn btn-primary">New</a>
             </div>
 
             <table class="table table-striped">

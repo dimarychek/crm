@@ -1,11 +1,13 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                @section('content_header')
+                    <h1>Dashboard</h1>
+                @stop
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +16,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    @section('content')
+                        <p>You are logged in!</p>
+                    @stop
                 </div>
             </div>
         </div>
